@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "filename: "
+read filename_
+touch filename_
+echo "#!/bin/bash" >> $filename_
+echo 'other lines? (remember to use CAT and C-D(EOF)for multi lines): '
+read otherlines
+echo $otherlines >> $filename_
+chmod u+x $filename_
+./pusher
+
